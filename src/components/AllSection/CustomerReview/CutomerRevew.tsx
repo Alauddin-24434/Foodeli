@@ -7,7 +7,7 @@ const CutomerRevew = () => {
     return (
         <Container>
 
-            <div className="flex  items-center py-24">
+            <div className="flex  items-center py-20">
                 {/*left side  */}
                 <div className="w-[669px] h-[650px] relative   flex items-center justify-center">
                     <img
@@ -18,7 +18,7 @@ const CutomerRevew = () => {
                     <img
                         src="/public/images/chef-holding-vegetables 1.png"
                         alt="bannar-1"
-                        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10"
+                        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 "
                     />
 
 
@@ -34,6 +34,9 @@ const CutomerRevew = () => {
                         alt="bannar-1"
                         className="absolute  top-12 left-16 "
                     />
+                    <span className="w-3 h-3 bg-[#F2C94C]  absolute top-6 left-1/3" style={{transform:'rotate(25deg)'}}>
+
+                    </span>
 
                     <img
                         src="/public/images/pata-1.png"
@@ -51,6 +54,9 @@ const CutomerRevew = () => {
                         className="absolute top-1/2 transform -translate-y-1/2 left-20 -translate-x-1/2  z-30"
                     />
 
+                    <span className="w-3 h-3 bg-[#F2C94C] rounded-full absolute bottom-4 left-6">
+
+                    </span>
                     <div className="absolute -bottom-20 right-0 z-30 w-[263px] h-[161px] bg-white shadow-xl rounded-3xl p-4 flex flex-col items-center">
                         <p className="text-xl font-semibold mb-3">Our Reviewers</p>
                         <div className="flex -space-x-2">
@@ -59,7 +65,7 @@ const CutomerRevew = () => {
                             <img className="inline-block size-[46px] rounded-full ring-2 ring-white dark:ring-neutral-900" src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80" alt="Avatar" />
                             <img className="inline-block size-[46px] rounded-full ring-2 ring-white dark:ring-neutral-900" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar" />
                             <div className="hs-dropdown [--placement:top-left] relative inline-flex">
-                                <button id="hs-avatar-group-dropdown" className="hs-dropdown-toggle inline-flex items-center justify-center size-[46px] rounded-full bg-gray-100 border-2 border-white font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-200 focus:outline-none focus:bg-gray-300 text-sm dark:bg-neutral-700 dark:text-white dark:hover:bg-neutral-600 dark:focus:bg-neutral-600 dark:border-neutral-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                                <button id="hs-avatar-group-dropdown" className="hs-dropdown-toggle inline-flex items-center justify-center size-[46px] rounded-full bg-[#EB0029] border-2 border-white font-medium text-[#ffff] shadow-sm align-middle hover:bg-gray-200 focus:outline-none focus:bg-gray-300 text-sm dark:bg-neutral-700 dark:text-white dark:hover:bg-[#EB0029] dark:focus:bg-[#EB0029] dark:border-neutral-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                                     <span className="font-medium leading-none">9+</span>
                                 </button>
 
@@ -84,17 +90,77 @@ const CutomerRevew = () => {
                 </div>
 
                 {/* right side */}
-                <div className="w-[594px]  flex flex-col gap-y-7">
+                <div className="w-[594px]  flex flex-col justify-start">
                     <SectionName
                         title="WHAT THEY SAY"
                         subTitle='What Our Customers | Say About Us'  // Use '|' to indicate line break
-                        description="“Fudo is the best. Besides the many and delicious meals, the service is also very good, especially in the very  fast delivey. I highly recommend Fudo  to you”."
+
                         titleClassName="text-[#EB0029]"
                         subTitleClassName='text-[45px] font-bold leading-[58px]'
-                        descClassName="font-medium"
+
                     />
 
+                    <div className="flex flex-col justify-between rounded-md  p-8 bg-white shadow-xl max-w-sm mx-8 ">
 
+                        {/* <!-- stars --> */}
+                        <div className="text-violet-500 flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="text-[#F2C94C]" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="text-[#F2C94C]" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="text-[#F2C94C]" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="text-[#F2C94C]" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="text-[#F2C94C]" width="20" height="20" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <p className="my-4 mb-0 text-base font-medium leading-relaxed tracking-wide text-gray-400">
+                            Fudo is the best. Besides the many and delicious meals, the service is also very good, especially in the very  fast delivey. I highly recommend Fudo  to you
+                        </p>
+
+
+                        <div className="mt-6 flex items-center gap-6 ">
+                            <div className="h-10 w-10 overflow-hidden rounded-full shadow-sm outline-neutral-800">
+                                <div className="relative inline-block overflow-hidden rounded-lg border-neutral-800">
+                                    <img alt="" src="https://randomuser.me/api/portraits/women/2.jpg" width="50" height="50"
+                                        decoding="async" data-nimg="1" className="inline-block " loading="lazy" style={{ "color": "transparent" }} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className="leading-relaxed tracking-wide font-medium text-black">Melissa Smith</p>
+                                <p className="text-xs leading-relaxed tracking-wide text-gray-400">Food Enthusiast</p>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
 
 

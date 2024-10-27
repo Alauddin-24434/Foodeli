@@ -23,7 +23,7 @@ const SectionName: React.FC<SectionNameProps> = ({
     const subTitleParts = subTitle.split('|');
 
     return (
-        <section className="p-8">
+        <section className="">
             <h2 className={`text-xl  ${titleClassName}`}>
                 {title}
             </h2>

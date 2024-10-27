@@ -7,11 +7,11 @@ const Navbar = () => {
        
             {/* <!-- component --> */}
             <nav >
-                <div className="md:h-16 h-28 pt-[76px] mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
+                <div className="md:h-16 h-28  pt-[76px] mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
                     <div className="flex gap-4 items-center w-[160px] h-[50px]">
                         <div className="bg-[#EB0029] w-[45px] h-[45px] flex flex-col items-center justify-center  text-white font-bold text-sm leading-none">
                             <span className="flex gap-1">F&nbsp;O</span>
-                            <span className="flex gap-1">D&nbsp;O</span>
+                            <span className="flex gap-1">O&nbsp;D</span>
                         </div>
                         <p className="text-2xl font-semibold tracking-wide text-[#EB0029]">Foodeli</p>
                     </div>

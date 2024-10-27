@@ -3,7 +3,7 @@ import SectionName from "../../shared/SectionName/SectionName";
 
 const WhatWeServe: React.FC = () => {
     return (
-        <div>
+        <div className='py-20' >
             <SectionName
                 title="WHAT WE SERVE"
                 subTitle='Your Favourite Food | Delivery Partner'  // Use '|' to indicate line break

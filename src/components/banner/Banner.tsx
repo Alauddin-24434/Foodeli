@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <Container>
 
-            <div className="flex  items-center mt-[90px]">
+            <div className="flex  items-center py-20">
 
                 {/*left side  */}
                 <div className="w-[594px] h-[429px] flex flex-col gap-y-7">
