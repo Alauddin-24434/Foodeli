@@ -1,3 +1,4 @@
+import CutomerRevew from "../../components/AllSection/CustomerReview/CutomerRevew";
 import WhatWeServe from "../../components/AllSection/WhatWeServe/WhatWeServe";
 import Banner from "../../components/banner/Banner";
 import Container from "../../components/shared/container/Container";
@@ -10,6 +11,7 @@ const Home = () => {
 
             <Banner />
             <WhatWeServe />
+            <CutomerRevew/>
         </Container>
     );
 };

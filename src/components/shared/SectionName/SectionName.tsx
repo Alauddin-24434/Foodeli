@@ -24,10 +24,10 @@ const SectionName: React.FC<SectionNameProps> = ({
 
     return (
         <section className="p-8">
-            <h2 className={`text-3xl font-bold text-center ${titleClassName}`}>
+            <h2 className={`text-xl  ${titleClassName}`}>
                 {title}
             </h2>
-            <h3 className={`text-2xl font-semibold text-center mt-2 ${subTitleClassName}`}>
+            <h3 className={`mt-2 ${subTitleClassName}`}>
                 {subTitleParts.map((part, index) => (
                     <span key={index}>
                         {part}
@@ -37,7 +37,7 @@ const SectionName: React.FC<SectionNameProps> = ({
                 ))}
             </h3>
             {description && (
-                <p className={`mt-4 text-lg text-gray-600 text-center ${descClassName}`}>
+                <p className={`mt-4  text-gray-600  ${descClassName}`}>
                     {description}
                 </p>
             )}
