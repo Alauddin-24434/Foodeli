@@ -1,0 +1,41 @@
+/* src/pages/Dashboard/UserDashboard.module.css */
+.userDashboard {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.dashboardMenu {
+    margin-bottom: 20px;
+}
+
+.dashboardMenu h2 {
+    margin-bottom: 10px;
+}
+
+.dashboardMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboardMenu li {
+    margin: 10px 0;
+}
+
+.dashboardMenu a {
+    text-decoration: none;
+    color: #1CD15D; /* Your primary color */
+}
+
+.dashboardContent {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.userSection {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

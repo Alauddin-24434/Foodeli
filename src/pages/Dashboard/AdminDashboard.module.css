@@ -1,0 +1,41 @@
+/* src/pages/Dashboard/AdminDashboard.module.css */
+.adminDashboard {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.adminMenu {
+    margin-bottom: 20px;
+}
+
+.adminMenu h2 {
+    margin-bottom: 10px;
+}
+
+.adminMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.adminMenu li {
+    margin: 10px 0;
+}
+
+.adminMenu a {
+    text-decoration: none;
+    color: #1CD15D; /* Your primary color */
+}
+
+.adminContent {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.adminSection {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
