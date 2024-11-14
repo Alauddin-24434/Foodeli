@@ -77,7 +77,7 @@ const CustomerReview = () => {
                         subTitleClassName="text-[40px] md:text-[45px] font-bold leading-[54px] md:leading-[58px]"
                     />
 
-                    <div className="flex flex-col justify-between rounded-md p-8 bg-white shadow-xl max-w-sm mx-auto">
+                    <div className="flex flex-col justify-between rounded-md p-8 bg-white shadow-xl max-w-sm ">
                         {/* Stars */}
                         <div className="text-violet-500 flex gap-2">
                             {[...Array(5)].map((_, index) => (
