@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import uploadImageToCloud from '../../utils/imageUploadCloudinary';
+import uploadImageToCloud from '../../../utils/imageUploadCloudinary';
 
 interface ImageUploadProps {
   label: string;

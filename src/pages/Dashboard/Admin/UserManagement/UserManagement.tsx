@@ -1,16 +1,23 @@
+import { useFindAllUsersQuery } from "../../../../redux/features/auth/authApi";
 
 const UserManagement = () => {
+
+    const {data} =useFindAllUsersQuery(undefined);
+
+
+const allUsers=data?.data;
+
     return (
         <div className="p-6">
             <header className="flex justify-between items-center mb-4">
                 <h1 className="text-3xl font-semibold">User Management</h1>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">+ Add New User</button>
+                
             </header>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                 <div className="bg-blue-500 p-4 rounded-md shadow-lg text-white">
                     <p className="text-xl">Total Users</p>
-                    <p className="text-3xl font-bold">1,250</p>
+                    <p className="text-3xl font-bold">{allUsers?.length}</p>
                 </div>
                 <div className="bg-green-500 p-4 rounded-md shadow-lg text-white">
                     <p className="text-xl">Active Users</p>
@@ -20,10 +27,7 @@ const UserManagement = () => {
                     <p className="text-xl">Admins</p>
                     <p className="text-3xl font-bold">15</p>
                 </div>
-                <div className="bg-gray-500 p-4 rounded-md shadow-lg text-white">
-                    <p className="text-xl">Guests</p>
-                    <p className="text-3xl font-bold">190</p>
-                </div>
+                
             </div>
 
             <div className="overflow-auto bg-white shadow-lg rounded-md">
@@ -40,18 +44,24 @@ const UserManagement = () => {
                     </thead>
                     <tbody>
                         {/* <!-- Loop through users to populate rows --> */}
-                        <tr className="border-b">
-                            <td className="px-4 py-3">
-                                <img src="user-avatar.jpg" alt="User Avatar" className="w-12 h-12 rounded-full" /></td>
-                            <td className="px-4 py-3">John Doe</td>
-                            <td className="px-4 py-3">john.doe@example.com</td>
-                            <td className="px-4 py-3">Admin</td>
-                            <td className="px-4 py-3"><span className="text-green-500 font-bold">Active</span></td>
-                            <td className="px-4 py-3">
-                                <button className="bg-yellow-400 text-white px-2 py-1 rounded">Edit</button>
-                                <button className="bg-red-500 text-white px-2 py-1 rounded ml-2">Delete</button>
-                            </td>
-                        </tr>
+
+{
+    allUsers?.map(user=> 
+        <tr key={user?._id} className="border-b">
+
+            <td className="px-4 py-3">
+                <img src={user?.profileImage} alt="User Avatar" className="w-12 h-12 rounded-full" /></td>
+            <td className="px-4 py-3">{user?.name}</td>
+            <td className="px-4 py-3">{user?.email}</td>
+            <td className="px-4 py-3">{user?.role}</td>
+            <td className="px-4 py-3"><span className="text-green-500 font-bold">{user?.userStatus}</span></td>
+            <td className="px-4 py-3">
+                <button className="bg-yellow-400 text-white px-2 py-1 rounded">Edit</button>
+                <button className="bg-red-500 text-white px-2 py-1 rounded ml-2">Delete</button>
+            </td>
+        </tr>)
+}
+
                         {/* <!-- Additional rows for other users --> */}
                     </tbody>
                 </table>

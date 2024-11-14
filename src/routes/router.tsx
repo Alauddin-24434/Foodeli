@@ -10,6 +10,11 @@ import ErrorPage from "../pages/ErrorPage";
 import adminRoutes from "./AdminRoutes";
 import ProtectedRoute from "./ProtectedRoute";
 import FoodShpSummery from "../pages/FoodShpSummery/FoodShpSummery";
+import FoodItems from "../pages/FoodItems/FoodItems";
+import PaymentCancel from "../pages/payment/PaymentCancel/PaymentCancel";
+import PaymentFailed from "../pages/payment/PaymentFail/PaymentFail";
+import AboutUs from "../pages/AboutUs/AboutUs";
+
 
 const router = createBrowserRouter([
     {
@@ -18,13 +23,22 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             { path: '/', element: <Home /> },
-            { path: '/food-details', element: <FoodDetails /> },
+            { path: '/food-details/:id', element: <FoodDetails /> },
             { path: '/food-reviews', element: <FoodReviews /> },
             { path: '/food-shop', element: <FoodShpSummery /> },
-            { path: '/register', element: <Register /> },
-            { path: '/login', element: <Login /> },
+            { path: '/food-items', element: <FoodItems /> },
+            { path: '/about-us', element: <AboutUs /> },
+
+         
+
+       
+           
         ],
     },
+    { path: '/cancel-payment', element: <PaymentCancel /> },
+    { path: '/fail-payment', element: <PaymentFailed/> },
+    { path: '/register', element: <Register /> },
+    { path: '/login', element: <Login /> },
     // Admin Routes
     ...adminRoutes.map((route) => ({
         path: route.path,

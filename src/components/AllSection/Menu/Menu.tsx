@@ -1,111 +1,50 @@
+import { Link } from "react-router-dom";
+import { FaPizzaSlice, FaUtensils, FaHamburger, FaCookie, FaFish, FaIceCream } from "react-icons/fa";
+import { RiCake3Fill } from "react-icons/ri";
+import { MdRamenDining } from "react-icons/md";
 import Container from "../../shared/container/Container";
 import SectionName from "../../shared/SectionName/SectionName";
 
 const Menu = () => {
-    const foodItems = [
-        {
-            name: "Burger",
-            category:"burger",
-            imageIcon: 'https://randomuser.me/api/portraits/women/2.jpg',
-            image: '/public/images/food.png'
-        },
-        {
-            name: "Pizza",
-            category:"Pizza",
-            imageIcon: 'https://randomuser.me/api/portraits/women/2.jpg',
-            image: '/public/images/food.png'
-        },
-    
-        {
-            name: "Cupcake",
-            category:"Cupcake",
-            imageIcon: 'https://randomuser.me/api/portraits/women/2.jpg',
-            image: '/public/images/food.png'
-        },
-        {
-            name: "Ramen",
-            category:"Ramen",
-            imageIcon: 'https://randomuser.me/api/portraits/women/2.jpg',
-            image: '/public/images/food.png',
-
-        },
-   
-        {
-            name: "ice Cream",
-            category:"ice Cream",
-            imageIcon: 'https://randomuser.me/api/portraits/women/2.jpg',
-            image: '/public/images/food.png'
-        },
-   
-    
-
-    ]
-
-
-    
-    
+    const categories = [
+        { id: 1, name: 'Pizza', icon: <FaPizzaSlice size={32} /> },
+        { id: 2, name: 'Pasta', icon: <FaUtensils size={32} /> },
+        { id: 3, name: 'Burger', icon: <FaHamburger size={32} /> },
+        { id: 4, name: 'Snacks', icon: <FaCookie size={32} /> },
+        { id: 5, name: 'Desserts', icon: <FaIceCream size={32} /> },
+        { id: 6, name: 'Seafood', icon: <FaFish size={32} /> },
+        { id: 7, name: 'Cupcake', icon: <RiCake3Fill size={32} /> },
+        { id: 8, name: 'Ramen', icon: <MdRamenDining size={32} /> },
+        { id: 9, name: 'Ice Cream', icon: <FaIceCream size={32} /> },
+    ];
 
     return (
-
         <Container>
             <div className="flex flex-col gap-y-8">
-            <div>
                 <SectionName
                     title="OUR MENU"
-                    subTitle='Menu That Always | Makes You Fall In Love'  // Use '|' to indicate line break
-                    titleClassName="text-[#EB0029] "
-                    subTitleClassName='text-[45px] font-bold leading-[58px] '
+                    subTitle='Menu That Always Makes | You Fall In Love'
+                    titleClassName="text-[#EB0029] text-center"
+                    subTitleClassName="text-[30px] sm:text-[35px] md:text-[45px] font-bold leading-tight text-center"
                 />
-
-
-
-            </div>
-
-
-
-            <div className="flex gap-8 items-center">
-                {/* map */}
-                <div className="list-none flex flex-col gap-y-6 h-[573px] w-[350px] overflow-y-scroll">
-                    {
-
-                        foodItems?.map(item => (<div key={item.name}>
-                            <span className="flex items-center  gap-6 w-[200px] hover:border p-4 rounded-full bg-[#EB0029] hover:text-[#ffff] ">
-                                <img src={item?.imageIcon} alt="" className="h-8 w-8 rounded-full" />
-                                <p>{item.category}</p>
-                            </span>
-                        </div>))
-                    }
-
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+                        {categories.map(category => (
+                            <Link key={category.id} to={`/food-items?category=${category.name}`}>
+                                {/* card */}
+                                <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-lg shadow-lg bg-gray-100 p-3 sm:p-4 transition duration-200 ease-in-out hover:bg-[#EB0029] hover:text-white group">
+                                    <div className="text-[#EB0029] group-hover:text-white transition duration-200 ease-in-out">
+                                        {category.icon}
+                                    </div>
+                                    <div className="text-center mt-2">
+                                        <h3 className="text-sm sm:text-lg font-semibold group-hover:text-white">{category.name}</h3>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
-                <div className=" flex flex-wrap justify-center gap-6 w-full h-[573px]  overflow-y-auto">
-
-                    {/* <img src="" alt="" /> */}
-
-                    {
-
-                        foodItems?.map(item  => (
-                            <span key={item.name} className="relative overflow-hidden   w-[250px] h-[300px] rounded-xl">
-                                <img src="/public/images/food.png" alt="" className="h-[300px] w-[250px] rounded-xl" />
-                                <p className="absolute bottom-14 left-4 text-[#fff] font-medium ">Italian Pizza</p>
-                                <p className="absolute bottom-8 left-4 text-[#fff] font-bold ">$ 7.29</p>
-                                <button className="absolute bottom-2 left-4 text-[#fff]">Order Now</button>
-                            </span>))
-                    }
-
-
-
-
-
-
-
-
-
-                </div>
-
-
             </div>
-
-        </div>
         </Container>
     );
 };
