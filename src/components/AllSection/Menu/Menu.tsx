@@ -4,6 +4,7 @@ import { RiCake3Fill } from "react-icons/ri";
 import { MdRamenDining } from "react-icons/md";
 import Container from "../../shared/container/Container";
 import SectionName from "../../shared/SectionName/SectionName";
+import FoodItemCard from "../../Cards/ItemCard/FoodItemCard";
 
 const Menu = () => {
     const categories = [
@@ -20,7 +21,8 @@ const Menu = () => {
 
     return (
         <Container>
-            <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-y-8">
                 <SectionName
                     title="OUR MENU"
                     subTitle='Menu That Always Makes | You Fall In Love'
@@ -28,7 +30,7 @@ const Menu = () => {
                     subTitleClassName="text-[30px] sm:text-[35px] md:text-[45px] font-bold leading-tight text-center"
                 />
                 <div className="container mx-auto">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-9 gap-4 sm:gap-6">
                         {categories.map(category => (
                             <Link key={category.id} to={`/food-items?category=${category.name}`}>
                                 {/* card */}
@@ -45,6 +47,8 @@ const Menu = () => {
                     </div>
                 </div>
             </div>
+            <FoodItemCard/>
+          </div>
         </Container>
     );
 };

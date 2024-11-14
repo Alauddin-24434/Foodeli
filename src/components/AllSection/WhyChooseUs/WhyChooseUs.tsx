@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-
+import chefImage from '../../../../public/images/whyChoseUs/chef.jpg';
+import burgerImage from '../../../../public/images/whyChoseUs/burger.jpg';
+import sandWitchImage from '../../../../public/images/whyChoseUs/sandwitch.jpg';
 const WhyChooseUs = () => {
   return (
     <section className="overflow-hidden lg:pb-[90px] bg-white dark:bg-dark">
@@ -10,18 +12,18 @@ const WhyChooseUs = () => {
             <div className="flex flex-row lg:flex-row gap-4">
               <img
                 className="h-[300px] lg:h-[560px] w-[200px] lg:w-[320px] rounded-full object-cover"
-                src="https://img.freepik.com/free-photo/vertical-shot-delicious-chocolate-cake-plate-some-pieces-chocolate_181624-29595.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722384000&semt=ais_hybrid"
-                alt="Chocolate Cake"
+                src={chefImage}
+                alt="Chef Image"
               />
               <div className="flex flex-col gap-4">
                 <img
                   className="h-[140px] lg:h-[270px] w-[140px] lg:w-[280px] rounded-t-full rounded-br-full rounded-bl-3xl object-cover"
-                  src="https://bhukkadcompany.com/wp/wp-content/uploads/2024/06/21-Best-Pizzas-in-Mumbai-You-Must-Try-A-Pizza-Lovers-Paradise-1-710x473.png"
-                  alt="Pizza"
+                  src={burgerImage}
+                  alt="Burger"
                 />
                 <img
                   className="h-[140px] lg:h-[270px] w-[140px] lg:w-[280px] rounded-br-full rounded-tr-full rounded-bl-full object-cover"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw83V7lI0FUwNOPLOI9O8dc36-WaxVxr5fBw&s"
+                  src={sandWitchImage}
                   alt="Sandwitch"
                 />
               </div>

@@ -6,7 +6,7 @@ export const baseApi = createApi({
     reducerPath: "baseApi",
     // 2. set base query
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000",
+        baseUrl: "https://foodeli-server-xi.vercel.app",
         // The 'credentials: "include"' option is used to ensure that cookies are sent correctly with cross-origin requests.
         // If this is not included, the refresh token may not be set properly,
         // and the browser will not store the cookie.
