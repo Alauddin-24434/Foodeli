@@ -5,7 +5,7 @@ import { MdOutlinePlayCircleFilled } from "react-icons/md";
 const Banner = () => {
     return (
         <Container>
-            <div className="flex flex-col md:flex-row items-center py-5  min-h-screen">
+            <div className="flex flex-col md:flex-row items-center  min-h-screen">
                 {/* Left Side */}
                 <div className="flex flex-col gap-y-4 sm:gap-y-5 md:gap-y-7 w-full md:w-1/2 px-4 sm:px-6 lg:px-8">
                     <h1 className="leading-7 sm:leading-8 md:leading-[85px] sm:text-center md:text-left">

@@ -5,7 +5,7 @@ const foodItemsApi = baseApi.injectEndpoints({
     // Create food item
     createFoodItem: builder.mutation({
       query: (foodInfo) => ({
-        url: "/",
+        url: "/foodItem-create",
         method: "POST",
         body: foodInfo,
       }),

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import {  useNavigate, useSearchParams } from "react-router-dom";
 import Container from "../../components/shared/container/Container";
 import { useFindAllFoodItemsQuery } from "../../redux/features/foodItems/foodItemsApi";
 import Loader from "../../Loader/Loader";
@@ -43,7 +43,7 @@ const FoodItems = () => {
     const totalItems = data?.data?.total || 0;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    const handleNavigate = (id) => navigate(`/food-details/${id}`);
+    const handleNavigate = (id:string) => navigate(`/food-details/${id}`);
     const handleClearFilters = () => {
         setSearch("");
         setSelectedCategory(""); // Use the renamed variable
@@ -117,7 +117,7 @@ const FoodItems = () => {
                                 src={item.thumbnailImage} 
                                 alt={item.name} 
                             />
-                            <span className="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-[#F2C94C] text-black text-center text-sm">Available</span>
+                            {/* <span className="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-[#F2C94C] text-black text-center text-sm">Available</span> */}
                             <div className="mt-4 px-5 pb-5">
                                 <h5 className="cursor-pointer text-xl font-semibold tracking-tight text-slate-900">
                                     {item.name}

@@ -1,6 +1,6 @@
 import DashboardLayout from '../layout/DashboardLayout';
 import FoodManagement from '../pages/Dashboard/Admin/FoodManagement/FoodManagement';
-import Notifications from '../pages/Dashboard/Admin/Notifications/Notifications';
+
 import PaymentManagement from '../pages/Dashboard/Admin/PaymentManagement/PaymentManagement';
 import UserManagement from '../pages/Dashboard/Admin/UserManagement/UserManagement';
 import AdminDashboard from '../pages/Dashboard/AdminDashboard';
@@ -15,7 +15,7 @@ const adminRoutes = [
             { path: '/dashboard/food-management', element: <FoodManagement /> },
             { path: '/dashboard/user-management', element: <UserManagement /> },
             { path: '/dashboard/payment-management', element: <PaymentManagement/> },
-            { path: '/dashboard/notifications', element: <Notifications/> },
+       
             // { path: 'user-management', element: <UserManagement /> },
             // Add more child routes here as needed
         ],
