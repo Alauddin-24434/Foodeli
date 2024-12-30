@@ -1,50 +1,92 @@
-# React + TypeScript + Vite
+# Foodeli - Food Delivery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Foodeli** is a restaurant app or platform that allows users to order pizzas, burgers, pasta, and other food items. It is a food delivery system designed to provide a seamless experience for customers who wish to order food online, track their deliveries in real-time, and enjoy a variety of customization options. 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. **User Registration and Login**
+- **Registration:** New users can easily create an account.
+- **Login:** Returning users can log in using email and password.
+- **Social Login:** Users can log in via Google or Facebook for faster access.
 
-## Expanding the ESLint configuration
+### 2. **Food Menu**
+- **Detailed Item Information:** Each food item will display the name, description, price, rating, and images.
+- **Customization Options:** Users can customize food items like pizza size, extra toppings, or cheese.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 3. **Online Order System**
+- **Real-Time Ordering:** Users can select and place orders instantly.
+- **Coupons/Discounts:** Users can apply promo codes to get discounts.
 
-- Configure the top-level `parserOptions` property like this:
+### 4. **Cart Feature**
+- **Multiple Item Addition:** Users can add multiple items to their cart.
+- **Item Management:** Users can add or remove food items, with updated total bill and VAT.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 5. **Order Tracking**
+- **Order Status:** Track real-time status (e.g., 'Preparing,' 'Out for Delivery,' 'Delivered').
+- **Delivery Tracking:** Users can track the delivery location in real-time.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 6. **Payment System**
+- **Online Payments:** Supports mobile payment options like Bkash, Rocket, Nagad, and card payments.
+- **Cash on Delivery:** Allows users to pay in cash upon delivery.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 7. **User Profile Management**
+- **Profile Updates:** Users can update their personal details (name, phone number, address).
+- **Order History:** View and manage past orders.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 8. **Featured and Popular Items**
+- **Special Offers:** Display weekly offers or deals.
+- **Popular Items:** Show items based on user ratings and reviews.
+
+### 9. **Reviews and Ratings**
+- **Food Reviews:** Users can leave ratings and reviews for food items.
+- **Restaurant Rating:** Display the restaurant's overall rating.
+
+### 10. **Delivery Time Estimation**
+- **Estimated Delivery Time:** Provide users with an estimated delivery time.
+- **Notification Alerts:** Notify users of any changes in the delivery time.
+
+### 11. **Admin Panel**
+- **Food Item Management:** Admin can add, update, or remove menu items.
+- **Order Management:** Admin can update the status of orders.
+- **User and Delivery Management:** Admin can manage users and delivery partners.
+
+---
+
+## Technologies Used
+
+- **Frontend:** React, Redux, TailwindCSS, React Router
+- **Backend:** Node.js, Express, MongoDB
+- **Payment Gateway Integration:** Bkash, Rocket, Nagad, Stripe (for cards)
+- **Real-Time Notifications:** Socket.io
+- **Maps:** Google Maps API for branch locator
+
+---
+
+## Setup Instructions
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/Alauddin-24434/Foodeli.git
+    cd Foodeli
+    ```
+
+2. Install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Set up environment variables for API keys and payment gateways.
+   
+4. Run the app:
+
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
