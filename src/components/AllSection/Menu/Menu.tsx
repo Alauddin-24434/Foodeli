@@ -1,56 +1,58 @@
 import { Link } from "react-router-dom";
-import { FaPizzaSlice, FaUtensils, FaHamburger, FaCookie, FaFish, FaIceCream } from "react-icons/fa";
-import { RiCake3Fill } from "react-icons/ri";
-import { MdRamenDining } from "react-icons/md";
 import Container from "../../shared/container/Container";
 import SectionName from "../../shared/SectionName/SectionName";
-import FoodItemCard from "../../Cards/ItemCard/FoodItemCard";
+import { useFindFoodCategoryQuery } from "../../../redux/features/foodItems/foodItemsApi";
+
+export interface CartItem {
+  _id: string;
+  category: string;
+  thumbnailImage: string;
+}
 
 const Menu = () => {
-    const categories = [
-        { id: 1, name: 'Pizza', icon: <FaPizzaSlice size={32} /> },
-        { id: 2, name: 'Pasta', icon: <FaUtensils size={32} /> },
-        { id: 3, name: 'Burger', icon: <FaHamburger size={32} /> },
-        { id: 4, name: 'Snacks', icon: <FaCookie size={32} /> },
-        { id: 5, name: 'Desserts', icon: <FaIceCream size={32} /> },
-        { id: 6, name: 'Seafood', icon: <FaFish size={32} /> },
-        { id: 7, name: 'Cupcake', icon: <RiCake3Fill size={32} /> },
-        { id: 8, name: 'Ramen', icon: <MdRamenDining size={32} /> },
-        { id: 9, name: 'Ice Cream', icon: <FaIceCream size={32} /> },
-    ];
+  const { data, isLoading } = useFindFoodCategoryQuery(undefined);
+  console.log(data);
 
-    return (
-        <Container>
-          <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-y-8">
-                <SectionName
-                    title="OUR MENU"
-                    subTitle='Menu That Always Makes | You Fall In Love'
-                    titleClassName="text-[#EB0029] text-center"
-                    subTitleClassName="text-[30px] sm:text-[35px] md:text-[45px] font-bold leading-tight text-center"
-                />
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-9 gap-4 sm:gap-6">
-                        {categories.map(category => (
-                            <Link key={category.id} to={`/food-items?category=${category.name}`}>
-                                {/* card */}
-                                <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-lg shadow-lg bg-gray-100 p-3 sm:p-4 transition duration-200 ease-in-out hover:bg-[#EB0029] hover:text-white group">
-                                    <div className="text-[#EB0029] group-hover:text-white transition duration-200 ease-in-out">
-                                        {category.icon}
-                                    </div>
-                                    <div className="text-center mt-2">
-                                        <h3 className="text-sm sm:text-lg font-semibold group-hover:text-white">{category.name}</h3>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <Container>
+      <div className="flex flex-col gap-8">
+        <SectionName
+          title="OUR MENU"
+          subTitle="The Love Affair Menu"
+          titleClassName="block text-lg font-bold text-primary "
+          subTitleClassName="text-3xl font-bold text-gray-800 dark:text-white sm:text-[40px]/[48px]"
+        />
+        <div className="container mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {data?.data?.map((cat: CartItem) => (
+              <Link
+                key={cat._id}
+                to={`/food-items?category=${cat.category}`}
+                className="group bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+              >
+                <div className="relative">
+                  <img
+                    src={cat.thumbnailImage}
+                    alt={cat.category}
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+                    <h3 className="text-white text-lg font-semibold text-center">
+                      {cat.category}
+                    </h3>
+                  </div>
                 </div>
-            </div>
-            <FoodItemCard/>
+              </Link>
+            ))}
           </div>
-        </Container>
-    );
+        </div>
+      </div>
+    </Container>
+  );
 };
 
 export default Menu;

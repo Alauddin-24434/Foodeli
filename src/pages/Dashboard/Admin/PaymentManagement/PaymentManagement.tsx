@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from "react";
 import Loader from "../../../../Loader/Loader";
 import { useFindAllPaymentsQuery } from "../../../../redux/features/payment/payment.api";
@@ -106,7 +107,7 @@ const PaymentManagement = () => {
                         </tr>
                     </thead>
                     <tbody className="text-gray-600 dark:text-gray-300 text-sm font-light">
-                        {payments?.map((payment) => (
+                        {payments?.map((payment:any) => (
                             <tr key={payment._id} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td className="py-3 px-6 text-left">{payment._id}</td>
                                 <td className="py-3 px-6 text-left">{payment.user.name}</td>

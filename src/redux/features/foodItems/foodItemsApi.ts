@@ -40,15 +40,33 @@ const foodItemsApi = baseApi.injectEndpoints({
         url: `foodItem/${id}`,
         method: "GET",
       }),
-      //   providesTags: ["food"], // নির্দিষ্ট Food item ক্যাশে সংরক্ষণ করবে
+      providesTags: ["food"],
+    }),
+    // Find food item by ID
+    findFoodCategory: builder.query({
+      query: () => ({
+        url: `foodItems-category`,
+        method: "GET",
+      }),
+      providesTags: ["food"],
     }),
 
     // Update food item
     updateFoodItem: builder.mutation({
       query: ({ id, ...foodInfo }) => ({
-        url: `/${id}`,
+        url: `foodItem/${id}`,
         method: "PUT",
         body: foodInfo,
+      }),
+      invalidatesTags: ["food"], // নির্দিষ্ট item এবং সব Food item ক্যাশ মেয়াদোত্তীর্ণ করবে
+    }),
+
+    // Update food item
+    addFoodReview: builder.mutation({
+      query: ({ productId, body }) => ({
+        url: `foodItem-review/${productId}`,
+        method: "PUT",
+        body,
       }),
       invalidatesTags: ["food"], // নির্দিষ্ট item এবং সব Food item ক্যাশ মেয়াদোত্তীর্ণ করবে
     }),
@@ -56,7 +74,7 @@ const foodItemsApi = baseApi.injectEndpoints({
     // Delete food item
     deleteFoodItem: builder.mutation({
       query: (id) => ({
-        url: `/${id}`,
+        url: `foodItem/${id}`,
         method: "DELETE",
       }),
       invalidatesTags: ["food"], // মুছে ফেলা item এবং সব Food item ক্যাশ মেয়াদোত্তীর্ণ করবে
@@ -70,4 +88,6 @@ export const {
   useFindFoodItemByIdQuery,
   useUpdateFoodItemMutation,
   useDeleteFoodItemMutation,
+  useFindFoodCategoryQuery,
+  useAddFoodReviewMutation,
 } = foodItemsApi;

@@ -4,7 +4,7 @@ import burgerImage from '../../../../public/images/whyChoseUs/burger.jpg';
 import sandWitchImage from '../../../../public/images/whyChoseUs/sandwitch.jpg';
 const WhyChooseUs = () => {
   return (
-    <section className="overflow-hidden lg:pb-[90px] bg-white dark:bg-dark">
+    <section className="overflow-hidden lg:pb-[90px] my-8 dark:bg-dark">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-center gap-8">
           {/* Image Section */}
@@ -33,10 +33,10 @@ const WhyChooseUs = () => {
           {/* Text Section */}
           <div className="w-full lg:w-1/2">
             <div className="mt-6 lg:mt-0 flex flex-col gap-6">
-              <span className="block text-lg font-semibold text-primary">
+              <span className="block uppercase text-lg font-bold text-primary">
                 Why Choose Us
               </span>
-              <h2 className="text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
+              <h2 className="text-3xl font-bold text-gray-800 dark:text-white sm:text-[40px]/[48px]">
                 Experience the Art of Culinary Excellence
               </h2>
               <p className="text-base text-body-color dark:text-dark-6">
@@ -46,17 +46,17 @@ const WhyChooseUs = () => {
               </p>
 
               <div className="grid grid-cols-2 gap-4">
-                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm">
-                  <span className="text-primary">90%</span> Repeat Customers
+                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm border-gray-800">
+                  <span className="text-primary font-bold">90%</span> Repeat Customers
                 </span>
-                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm">
-                  <span className="text-primary">94%</span> Freshness & Quality
+                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm border-gray-800">
+                  <span className="text-primary font-bold">94%</span> Freshness & Quality
                 </span>
-                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm">
-                  <span className="text-primary">20 min</span> Min. Delivery Time
+                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm border-gray-800">
+                  <span className="text-primary font-bold">20 min</span> Min. Delivery Time
                 </span>
-                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm">
-                  <span className="text-primary">500+</span> Positive Reviews
+                <span className="h-[60px] w-full border flex justify-center items-center gap-2 rounded-lg shadow-sm border-gray-800">
+                  <span className="text-primary font-bold">500+</span> Positive Reviews
                 </span>
               </div>
 

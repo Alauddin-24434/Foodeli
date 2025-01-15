@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react';
 import FoodModal from '../../../../components/Dashboard/AdminRelated/Foodmodal';
 import { useFindAllFoodItemsQuery } from '../../../../redux/features/foodItems/foodItemsApi';
-
+interface FoodItem {
+    _id: string;
+    name: string;
+    price: number;
+    category:string;
+    thumbnailImage: string;
+    isAvailable:boolean;
+    rating?: number;
+}
 const FoodManagement = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
@@ -71,7 +79,7 @@ const FoodManagement = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data?.data?.items?.map((item) => (
+                        {data?.data?.items?.map((item:FoodItem) => (
                             <tr key={item._id} className="border-b hover:bg-gray-50">
                                 <td className="px-4 py-2">
                                     <img

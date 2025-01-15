@@ -5,16 +5,16 @@ import { MdOutlinePlayCircleFilled } from "react-icons/md";
 const Banner = () => {
     return (
         <Container>
-            <div className="flex flex-col md:flex-row items-center  min-h-screen">
+            <div className="flex flex-col md:flex-row items-center  min-h-[70vh] ">
                 {/* Left Side */}
-                <div className="flex flex-col gap-y-4 sm:gap-y-5 md:gap-y-7 w-full md:w-1/2 px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col gap-y-4 sm:gap-y-5 md:gap-y-4 w-full md:w-1/2 px-4 sm:px-6 lg:px-8">
                     <h1 className="leading-7 sm:leading-8 md:leading-[85px] sm:text-center md:text-left">
-                        <span className="text-2xl sm:text-3xl md:text-[55px] lg:text-[67px] font-bold">Claim Best Offer on Fast </span>
-                        <span className="text-2xl sm:text-4xl md:text-[60px] lg:text-[80px] font-bold italic text-primary">Food</span>
-                        <span className="text-2xl sm:text-3xl md:text-[55px] lg:text-[67px] font-bold"> & </span>
-                        <span className="text-2xl sm:text-4xl md:text-[60px] lg:text-[80px] font-bold italic text-primary">Restaurants</span>
+                        <span className="text-2xl sm:text-3xl md:text-[55px] lg:text-[55px] font-bold text-gray-800">Claim Best Offer on Fast </span>
+                        <span className="text-2xl sm:text-4xl md:text-[60px] lg:text-[60px] font-bold italic text-primary">Food</span>
+                        <span className="text-2xl sm:text-3xl md:text-[55px] lg:text-[55px] font-bold text-gray-800"> & </span>
+                        <span className="text-2xl sm:text-4xl md:text-[60px] lg:text-[60px] font-bold italic text-primary">Restaurants</span>
                     </h1>
-                    <p className="sm:text-center md:text-left text-sm sm:text-base lg:text-lg font-medium">
+                    <p className="sm:text-center md:text-left text-sm sm:text-base lg:text-lg font-normal">
                         Our job is to fill your tummy with delicious food <br className="hidden sm:block" />
                         with fast and free delivery
                     </p>

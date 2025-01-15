@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../../shared/container/Container";
 import SectionName from "../../shared/SectionName/SectionName";
 
@@ -5,8 +6,8 @@ const CustomerReview = () => {
     return (
         <Container>
             <div className="flex flex-col-reverse md:flex-row items-center py-20">
-                  {/* Left Side */}
-                  <div className="w-full md:w-[669px] h-[650px] relative flex items-center justify-center mb-10 md:mb-0">
+                {/* Left Side */}
+                <div className="w-full md:w-[669px] h-[650px] relative flex items-center justify-center mb-10 md:mb-0">
                     <img
                         src="/public/images/Rectangle 4.png"
                         alt="banner-1"
@@ -54,7 +55,7 @@ const CustomerReview = () => {
                             <img className="inline-block h-11 w-11 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80" alt="Avatar" />
                             <img className="inline-block h-11 w-11 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar" />
                             <div className="hs-dropdown relative inline-flex">
-                                <button className="hs-dropdown-toggle inline-flex items-center justify-center h-11 w-11 rounded-full bg-[#EB0029] border-2 border-white font-medium text-white hover:bg-gray-200 focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                                <button className="hs-dropdown-toggle inline-flex items-center justify-center h-11 w-11 rounded-full bg-[#EB0029] border-2 border-white font-medium text-white hoover:text-black focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                                     <span className="font-medium leading-none">9+</span>
                                 </button>
                                 <div className="hs-dropdown-menu w-48 hidden z-10 transition-opacity duration-300 mb-2 bg-white shadow-md rounded-lg p-2">
@@ -69,15 +70,15 @@ const CustomerReview = () => {
                     </div>
                 </div>
                 {/* Right Side */}
-                <div className="w-full md:w-[594px] flex flex-col justify-start">
+                <div className="w-full md:w-[594px] flex flex-col gap-4 justify-start">
                     <SectionName
                         title="WHAT THEY SAY"
-                        subTitle="What Our Customers | Say About Us"
-                        titleClassName="text-[#EB0029]"
-                        subTitleClassName="text-[40px] md:text-[45px] font-bold leading-[54px] md:leading-[58px]"
+                        subTitle="What Our Guests Are Saying"
+                        titleClassName="text-[#EB0029] font-bold"
+                        subTitleClassName="text-3xl font-bold text-gray-800 dark:text-white sm:text-[40px]/[48px]"
                     />
 
-                    <div className="flex flex-col justify-between rounded-md p-8 bg-white shadow-xl max-w-sm ">
+                    <div className="flex flex-col justify-between rounded-md p-8 bg-white shadow-xl h-full border">
                         {/* Stars */}
                         <div className="text-violet-500 flex gap-2">
                             {[...Array(5)].map((_, index) => (
@@ -99,14 +100,19 @@ const CustomerReview = () => {
                                 </div>
                             </div>
                             <div>
-                                <p className="text-base font-semibold">John Doe</p>
+                                <p className="text-base font-semibold">Md Alauddin</p>
                                 <p className="text-sm text-gray-500">Customer</p>
                             </div>
                         </div>
                     </div>
+                    <Link to="/food-reviews">
+                        <button className="button-primary px-6 py-3 rounded-lg">
+                            Explore More
+                        </button>
+                    </Link>
                 </div>
 
-              
+
             </div>
         </Container>
     );

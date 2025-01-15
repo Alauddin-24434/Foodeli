@@ -42,7 +42,7 @@ const FoodDetails = () => {
                     <FoodDetailsTopCard foodDetails={foodDetails} />
                     <hr />
                     {/* Food Details Review Section */}
-                    <FoodDetailsReviewSection />
+                    <FoodDetailsReviewSection foodDetails={foodDetails}  productId={id as string}  />
                 </div>
             </div>
         </Container>

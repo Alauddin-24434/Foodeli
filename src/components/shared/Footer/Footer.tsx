@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-white">
+            <footer className="bg-slate-800">
                 <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                         <div>
@@ -17,7 +17,7 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+                            <p className="mt-6 max-w-md text-center leading-relaxed text-white sm:max-w-xs sm:text-left">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
                                 cum itaque neque.
                             </p>
@@ -115,67 +115,67 @@ const Footer = () => {
 
                         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
                             <div className="text-center sm:text-left">
-                                <p className="text-lg font-medium text-gray-900">About Us</p>
+                                <p className="text-lg font-medium text-white">About Us</p>
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                        <a className="text-white" href="#">
                                             Company History
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                        <a className="text-white" href="#">
                                             Meet the Team
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                        <a className="text-white" href="#">
                                             Employee Handbook
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Careers </a>
+                                        <a className="text-white" href="#"> Careers </a>
                                     </li>
                                 </ul>
                             </div>
 
                             <div className="text-center sm:text-left">
-                                <p className="text-lg font-medium text-gray-900">Our Services</p>
+                                <p className="text-lg font-medium text-white">Our Services</p>
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                        <a className="text-white" href="#">
                                             Web Development
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Web Design </a>
+                                        <a className="text-white" href="#"> Web Design </a>
                                     </li>
 
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Marketing </a>
+                                        <a className="text-white" href="#"> Marketing </a>
                                     </li>
 
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Google Ads </a>
+                                        <a className="text-white" href="#"> Google Ads </a>
                                     </li>
                                 </ul>
                             </div>
 
                             <div className="text-center sm:text-left">
-                                <p className="text-lg font-medium text-gray-900">Helpful Links</p>
+                                <p className="text-lg font-medium text-white">Helpful Links</p>
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> FAQs </a>
+                                        <a className="text-white" href="#"> FAQs </a>
                                     </li>
 
                                     <li>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Support </a>
+                                        <a className="text-white" href="#"> Support </a>
                                     </li>
 
                                     
@@ -183,7 +183,7 @@ const Footer = () => {
                             </div>
 
                             <div className="text-center sm:text-left">
-                                <p className="text-lg font-medium text-gray-900">Contact Us</p>
+                                <p className="text-lg font-medium text-white">Contact Us</p>
 
                                 <ul className="mt-8 space-y-4 text-sm">
                                     <li>
@@ -193,7 +193,7 @@ const Footer = () => {
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="size-5 shrink-0 text-gray-900"
+                                                className="size-5 shrink-0 text-white"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
@@ -206,7 +206,7 @@ const Footer = () => {
                                                 />
                                             </svg>
 
-                                            <span className="flex-1 text-gray-700">john@doe.com</span>
+                                            <span className="flex-1 text-white">john@doe.com</span>
                                         </a>
                                     </li>
 
@@ -217,7 +217,7 @@ const Footer = () => {
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="size-5 shrink-0 text-gray-900"
+                                                className="size-5 shrink-0 text-white"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
@@ -230,7 +230,7 @@ const Footer = () => {
                                                 />
                                             </svg>
 
-                                            <span className="flex-1 text-gray-700">0123456789</span>
+                                            <span className="flex-1 text-white">0123456789</span>
                                         </a>
                                     </li>
 
@@ -239,7 +239,7 @@ const Footer = () => {
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="size-5 shrink-0 text-gray-900"
+                                            className="size-5 shrink-0 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -257,7 +257,7 @@ const Footer = () => {
                                             />
                                         </svg>
 
-                                        <address className="-mt-0.5 flex-1 not-italic text-gray-700">
+                                        <address className="-mt-0.5 flex-1 not-italic text-white">
                                             213 Lane, London, United Kingdom
                                         </address>
                                     </li>
@@ -268,7 +268,7 @@ const Footer = () => {
 
                     <div className="mt-12 border-t border-gray-100 pt-6">
                         <div className="text-center sm:flex sm:justify-between sm:text-left">
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-white">
                                 <span className="block sm:inline">All rights reserved.</span>
 
                                 <a
@@ -288,7 +288,7 @@ const Footer = () => {
                                 </a>
                             </p>
 
-                            <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">&copy; 2022 Company Name</p>
+                            <p className="mt-4 text-sm text-white sm:order-first sm:mt-0">&copy; 2022 Company Name</p>
                         </div>
                     </div>
                 </div>

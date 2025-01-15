@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useFindAllUsersQuery } from "../../../../redux/features/auth/authApi";
 
 const UserManagement = () => {
@@ -46,7 +47,7 @@ const allUsers=data?.data;
                         {/* <!-- Loop through users to populate rows --> */}
 
 {
-    allUsers?.map(user=> 
+    allUsers?.map((user:any)=> 
         <tr key={user?._id} className="border-b">
 
             <td className="px-4 py-3">

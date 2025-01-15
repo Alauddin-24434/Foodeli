@@ -3,7 +3,13 @@ import {  useNavigate, useSearchParams } from "react-router-dom";
 import Container from "../../components/shared/container/Container";
 import { useFindAllFoodItemsQuery } from "../../redux/features/foodItems/foodItemsApi";
 import Loader from "../../Loader/Loader";
-
+interface FoodItem {
+    _id: string;
+    name: string;
+    price: number;
+    thumbnailImage: string;
+    rating?: number;
+}
 const FoodItems = () => {
     const navigate = useNavigate();
     const [search, setSearch] = useState("");
@@ -109,7 +115,7 @@ const FoodItems = () => {
 
                 {/* Food Items List */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {foodItems.map(item => (
+                    {foodItems.map((item:FoodItem)=> (
                         <div key={item._id} className="relative overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-200 hover:shadow-lg">
                             <img 
                                 onClick={() => handleNavigate(item._id)} 
@@ -117,7 +123,7 @@ const FoodItems = () => {
                                 src={item.thumbnailImage} 
                                 alt={item.name} 
                             />
-                            {/* <span className="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-[#F2C94C] text-black text-center text-sm">Available</span> */}
+                            <span className="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-[#F2C94C] text-black text-center text-sm">Available</span>
                             <div className="mt-4 px-5 pb-5">
                                 <h5 className="cursor-pointer text-xl font-semibold tracking-tight text-slate-900">
                                     {item.name}

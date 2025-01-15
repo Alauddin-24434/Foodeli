@@ -1,9 +1,12 @@
 // types.ts
 export interface Review {
     userId: string;
-    rating: number;
-    comment: string;
-    createdAt: Date;
+    productId:string;
+    username: string;               // Username of the reviewer
+    rating: number;                 // Rating should be between 1 and 5
+    profileImage: string;           // URL to the reviewer's profile image
+    comment?: string;               // Optional comment
+    date: string;          
   }
 
 export interface IFoodItem {

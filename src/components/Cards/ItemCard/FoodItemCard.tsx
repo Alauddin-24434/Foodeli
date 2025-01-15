@@ -1,4 +1,3 @@
-import React from 'react';
 
 const FoodItemCard = () => {
   const foodItems = [
@@ -76,7 +75,7 @@ const FoodItemCard = () => {
     },
   ];
 
-  const handleNavigate = (id) => {
+  const handleNavigate = (id:string) => {
     console.log(`Navigating to item with ID: ${id}`);
     // Add navigation logic here (e.g., React Router)
   };

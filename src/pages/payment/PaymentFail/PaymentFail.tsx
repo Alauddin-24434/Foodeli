@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
@@ -10,10 +11,9 @@ const PaymentFailed = () => {
         const updatePaymentStatus = async () => {
             if (transactionId) {
                 try {
-                    // Send transactionId as a query parameter using a PUT request
-                    await axios.put(`http://localhost:5000/fail-payment?transactionId=${transactionId}`);
-                    console.log('Payment status updated to canceled');
-                } catch (error) {
+                    await axios.put(`https://foodeli-server-xi.vercel.app/fail-payment?transactionId=${transactionId}`);
+                    console.log('Payment status updated to failed');
+                } catch (error: any) {
                     console.error('Failed to update payment status:', error.response?.data || error.message);
                 }
             } else {
@@ -24,78 +24,32 @@ const PaymentFailed = () => {
         updatePaymentStatus();
     }, [transactionId]);
 
-
     return (
-        <div style={styles.container}>
-            <div style={styles.card}>
-                <div style={styles.icon}>⚠️</div>
-                <h1 style={styles.title}>Payment Failed</h1>
-                <p style={styles.message}>
+        <div className="flex items-center justify-center min-h-screen bg-gray-100 px-6">
+            <div className="bg-white shadow-lg rounded-lg p-8 max-w-lg text-center">
+                <div className="text-4xl text-red-500 mb-4">⚠️</div>
+                <h1 className="text-2xl font-semibold text-gray-800 mb-4">Payment Failed</h1>
+                <p className="text-gray-600 mb-6">
                     Unfortunately, your payment could not be processed. Please try again or contact support for help.
                 </p>
                 {transactionId && (
-                    <p style={styles.transaction}>Transaction ID: {transactionId}</p>
+                    <p className="text-sm text-gray-500 mb-6">Transaction ID: {transactionId}</p>
                 )}
-                <Link to="/retry-payment" style={styles.button}>
+                <Link
+                    to="/retry-payment"
+                    className="block w-full bg-green-500 text-white py-2 rounded-md font-bold mb-3 transition hover:bg-green-600"
+                >
                     Retry Payment
                 </Link>
-                <Link to="/" style={{ ...styles.button, backgroundColor: '#333', marginTop: '10px' }}>
+                <Link
+                    to="/"
+                    className="block w-full bg-gray-800 text-white py-2 rounded-md font-bold transition hover:bg-gray-900"
+                >
                     Go to Homepage
                 </Link>
             </div>
         </div>
     );
-};
-
-// Inline CSS styles for improved design
-const styles = {
-    container: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        backgroundColor: '#f9f9f9',
-        padding: '20px',
-    },
-    card: {
-        backgroundColor: '#fff',
-        padding: '40px',
-        borderRadius: '8px',
-        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-        maxWidth: '500px',
-        textAlign: 'center',
-    },
-    icon: {
-        fontSize: '48px',
-        color: '#d9534f',
-        marginBottom: '20px',
-    },
-    title: {
-        fontSize: '28px',
-        color: '#333',
-        marginBottom: '20px',
-        fontWeight: '600',
-    },
-    message: {
-        fontSize: '16px',
-        color: '#555',
-        marginBottom: '20px',
-    },
-    transaction: {
-        fontSize: '14px',
-        color: '#777',
-        marginBottom: '30px',
-    },
-    button: {
-        display: 'inline-block',
-        padding: '12px 24px',
-        backgroundColor: '#1CD15D',
-        color: '#fff',
-        borderRadius: '5px',
-        textDecoration: 'none',
-        fontWeight: 'bold',
-        transition: 'background-color 0.3s',
-    },
 };
 
 export default PaymentFailed;
